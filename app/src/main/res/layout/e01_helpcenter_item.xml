@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/view_grey"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/layout_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="怎样登陆账户?"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+           />
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="怎样登陆账户?"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/line_grey" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >-->
+
+    <com.dmy.farming.view.SwipeMenuLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:clickable="true"
+        android:paddingBottom="1dp"
+        app:ios="false"
+        app:leftSwipe="true"
+        app:swipeEnable="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/myquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2017-02-14 17:30"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_grey"/>
+                        <TextView
+                            android:id="@+id/position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="通州市科尔沁左翼中旗"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/text_grey"
+                            android:textSize="13sp"
+                            android:drawableLeft="@drawable/icon_position1"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="棉花种植技术指南，且看我来说一说!"
+                        android:textSize="17sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="left|center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_tag"
+                            android:scaleType="centerCrop"
+                            />
+                        <TextView
+                            android:id="@+id/keyword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_grey"
+                            android:text="棉花"/>
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="10sp"
+                            android:text="技术"/>-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center|left">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_reply"/>
+                        <TextView
+                            android:id="@+id/comment_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3.1万"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/text_grey"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/icon_browse"/>
+                        <TextView
+                            android:id="@+id/browse_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3.1万"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/text_grey"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/img_user"
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="40dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/solve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_resolved"
+                android:layout_gravity="right"/>
+
+        </FrameLayout>
+
+        <!-- 以下都是侧滑菜单的内容依序排列 -->
+        <!-- <Button
+             android:id="@+id/btnTop"
+             android:layout_width="60dp"
+             android:layout_height="match_parent"
+             android:background="#d9dee4"
+             android:text="置顶"
+             android:textColor="@android:color/white"/>
+
+         <Button
+             android:id="@+id/btnUnRead"
+             android:layout_width="120dp"
+             android:layout_height="match_parent"
+             android:background="#ecd50a"
+             android:clickable="true"
+             android:text="标记未读"
+             android:textColor="@android:color/white"/>-->
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@color/hbao_red"
+            android:text="删除"
+            android:textColor="@android:color/white"/>
+
+    </com.dmy.farming.view.SwipeMenuLayout>
+
+    <!--<View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_grey"
+        android:layout_marginTop="20dp"/>-->
+
+<!--</LinearLayout>-->

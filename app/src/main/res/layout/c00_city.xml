@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_grey"
+    android:orientation="vertical" >
+
+    <ImageView android:id="@+id/bar_top_status"
+        android:layout_width="match_parent"
+        android:background="@color/main_green"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/main_green">
+
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:id="@+id/view_search"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/input_round_white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ser_icon_search"/>
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:textSize="13sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColorHint="@color/text_whitegrey"
+                android:cursorVisible="false"
+                android:imeOptions="actionSearch"
+                android:hint="输入城市名或拼音"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/button_right"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textSize="15sp"
+            android:textColor="@color/text_blackgrey"
+            android:background="@drawable/layout_trans_grey"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+
+            <ListView
+                android:id="@+id/search_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:cacheColorHint="#00000000"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_noresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="抱歉,暂时没有找到相关城市"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.droid.MyLetterListView
+                android:id="@+id/llist_letter"
+                android:layout_width="25dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="7dp" />
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

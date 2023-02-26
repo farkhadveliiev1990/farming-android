@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_grey"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/view_grey"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent" >
+
+            <com.external.maxwin.view.XListView
+                android:id="@+id/list_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#00000000"
+                android:dividerHeight="0dp" />
+
+            <include
+                android:id="@+id/null_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/null_pager"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

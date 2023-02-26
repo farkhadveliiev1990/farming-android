@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="12sp"
+        android:background="@color/view_grey"/>-->
+
+    <LinearLayout
+        android:id="@+id/layout_route_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="好友"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_right"/>-->
+
+    </LinearLayout>
+
+    <com.dmy.farming.view.MyGridView
+        android:id="@+id/grid_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="1"
+        android:horizontalSpacing="5dp">
+    </com.dmy.farming.view.MyGridView>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/layout_frame"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="@drawable/layout_trans_grey"-->
+        <!--android:gravity="center_vertical" >-->
+
+        <!--<org.bee.view.SelectableRoundedImageView-->
+            <!--android:id="@+id/img_head"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/default_avatar"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--app:sriv_border_color="@color/line_grey"-->
+            <!--app:sriv_border_width="1dp"-->
+            <!--app:sriv_left_bottom_corner_radius="20dp"-->
+            <!--app:sriv_left_top_corner_radius="20dp"-->
+            <!--app:sriv_right_bottom_corner_radius="20dp"-->
+            <!--app:sriv_right_top_corner_radius="20dp" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:orientation="vertical">-->
+            <!--<TextView-->
+                <!--android:id="@+id/text_name"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="昵称"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--android:maxLines="a1"-->
+                <!--android:layout_weight="a1"-->
+                <!--android:textColor="@color/text_blackgrey"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/text_tag"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="昵称"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--android:maxLines="a1"-->
+                <!--android:layout_weight="a1"-->
+                <!--android:textColor="@color/text_grey"-->
+                <!--android:textSize="13sp" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

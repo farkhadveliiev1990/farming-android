@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView android:id="@+id/bar_top_status"
+        android:layout_width="match_parent"
+        android:background="@color/main_green"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/main_green"
+        android:layout_height="48dp" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="筛选"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/layout_crop">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="作物"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/text_crop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="请选择作物"
+                    android:textColor="@color/text_whitegrey"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical|right"
+                    android:drawableRight="@drawable/q_icon_right"
+                    android:drawablePadding="10dp"/>
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="请选择作物"
+                    android:visibility="gone"
+                    android:textColor="@color/text_whitegrey"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/layout_position">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="地区"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/text_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="请选择种植"
+                    android:textColor="@color/text_whitegrey"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical|right"
+                    android:drawableRight="@drawable/q_icon_right"
+                    android:drawablePadding="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/q_bg_btn"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"/>
+
+    </FrameLayout>
+</LinearLayout>

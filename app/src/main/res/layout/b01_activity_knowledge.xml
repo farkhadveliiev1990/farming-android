@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ImageView android:id="@+id/bar_top_status"
+        android:layout_width="match_parent"
+        android:background="@color/main_green"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/main_green"
+        android:layout_height="48dp" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="知识库"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/knowledge_bg_btn"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="50dp"
+            android:text="精准推送"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/z_icon_ser"
+            android:layout_gravity="right"/>
+    </FrameLayout>
+
+    <com.external.maxwin.view.XListView
+        android:id="@+id/list_knowledge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"/>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="home_tab_width">70dp</dimen>
+
+    <!-- 查看大图页面 -->
+    <dimen name="datu_btns_paddingLeft">41px</dimen>
+    <dimen name="datu_btns_paddingRight">41px</dimen>
+    <dimen name="datu_btns_paddingTop">12px</dimen>
+    <dimen name="datu_btns_paddingBottom">2px</dimen>
+    <dimen name="datu_btn_marginLeft">64px</dimen>
+
+    <!-- photopicker -->
+    <dimen name="folder_padding" >10dp</dimen>
+    <dimen name="folder_cover_size">72dp</dimen>
+    <dimen name="image_size" >120dp</dimen>
+    <dimen name="space_size" >2dp</dimen>
+    <dimen name="action_text_size" >16sp</dimen>
+
+    <dimen name="btn_text_size">16sp</dimen>
+    <dimen name="view_text_size">10sp</dimen>
+</resources>

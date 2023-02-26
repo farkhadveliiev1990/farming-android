@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_yellow">#ffd943</color>
+    <color name="main_green">#2FB42C</color>
+    <color name="main_green1">#48bf45</color>
+
+    <color name="hbao_red">#e82a00</color>
+    <color name="hbao_red_sel">#ffe7755c</color>
+
+    <color name="button_yellow">#fccb00</color>
+    <color name="button_whiteyellow">#fde57f</color>
+    <color name="button_green">#32ad32</color>
+    <color name="online_green">#30B42B</color>
+    <color name="button_gary">#EEEEEE</color>
+
+    <color name="bg_color">#EFFBF8</color>
+    <color name="bg_color_search">#EEF9EE</color>
+
+    <color name="text_blackgrey">#333333</color>
+    <color name="text_grey">#666666</color>
+    <color name="text_grey1">#B6B6B6</color>
+    <color name="text_whitegrey">#999999</color>
+    <color name="text_keygrey">#CCCCCC</color>
+    <color name="text_blue">#00b7ee</color>
+    <color name="text_red">#ff4200</color>
+    <color name="text_yellow">#FFF66C</color>
+    <color name="text_yellow1">#F9F3B7</color>
+    <color name="text_yellow2">#A2270F</color>
+    <color name="text_yellow3">#FF9F00</color>
+    <color name="text_yellow4">#FF7500</color>
+
+    <!--<color name="view_grey">#e5e5e5</color>-->
+    <color name="view_grey">#f6f6f6</color>
+    <color name="view_blackgrey">#bfbfbf</color>
+    <color name="line_grey">#c9c9c9</color>
+    <color name="line_grey1">#EBEBEB</color>
+    <color name="question_answer_line_grey">#DCDCDC</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="trans">#0000</color>
+    <color name="green">#32cd32</color>
+    <color name="green2">#48bf45</color>
+    <color name="translucence">#506050</color>
+
+    <color name="background_tab_pressed">#22fdb7be</color>
+
+    <drawable name="color_white">#ffffff</drawable>
+    <drawable name="color_whitegrey">#e5e5e5</drawable>
+    <drawable name="color_trans">#00ffffff</drawable>
+    <drawable name="color_red">#ffff4200</drawable>
+    <drawable name="color_red_sel">#ffe7755c</drawable>
+    <drawable name="color_button_yellow">#fffccb00</drawable>
+    <drawable name="color_button_whiteyellow">#fffde57f</drawable>
+
+
+    <color name="filter_text_color">#666666</color>
+    <color name="spec_text_color">#999999</color>
+    <color name="spec_select_text_color">#ff0000</color>
+
+    <drawable name="color_b">#44aaaaaa</drawable>
+    <drawable name="color_a">#00000000</drawable>
+
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_red_light">#ffff4444</color>
+
+    <color name="list_itease_secondary_color">#888888</color>
+    <color name="list_itease_primary_color">#000</color>
+    <color name="emojicon_tab_selected">#D9D9D9</color>
+    <color name="emojicon_tab_nomal">#ffffff</color>
+
+    <!-- qrcode -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="money_activity_backgroundcolor">#E5E6EB</color>
+    <color name="txt_black">#000000</color>
+    <color name="txt_black212121">#212121</color>
+    <color name="txt_white">#ffffff</color>
+    <color name="txt_hui">#c3c3c9</color>
+    <color name="txt_red">#fe5d5d</color>
+    <color name="txt_wenzi_hui">#858585</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- photopicker -->
+    <color name="action_text_color_normal" >#cfcfcf</color>
+    <color name="action_text_color_pressed" >#353535</color>
+    <color name="action_text_color_enabled" >#818585</color>
+    <color name="photopicker_background">#181819</color>
+
+    <color name="bg_video_controller">#A6000000</color>
+    <color name="bg_video_controller_divider">#FDFDFD</color>
+    <color name="colorPrimary">#fe6778</color>
+
+    <color name="btn_cancel_color">#999999</color>
+    <color name="btn_confirm_color">#303F9F</color>
+
+    <color name="reply_button_text_disable">#b8b8b8</color>
+    <color name="reply_button_disable">#f5f5f5</color>
+    <color name="light_gray">#50bfbfbf</color>
+    <color name="dark_green">#19ad17</color>
+    <color name="light_white">#f7fff6</color>
+</resources>

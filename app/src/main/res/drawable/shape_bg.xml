@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    &lt;!&ndash;&lt;!&ndash;  设置背景色图像资源  &ndash;&gt;&ndash;&gt;
+  <item android:id="@android:id/background" android:drawable="@drawable/bg_slider"  android:width="303dp" android:height="40dp"/>
+   &lt;!&ndash; &lt;!&ndash;  设置第二级进度条颜色图像资源 &ndash;&gt;&ndash;&gt;
+    <item android:id="@android:id/secondaryProgress"  android:drawable="@drawable/bg_slider" android:width="303dp" android:height="40dp"/>
+
+   &lt;!&ndash; &lt;!&ndash;  设置第一级进度条颜色图像资源  &ndash;&gt;&ndash;&gt;
+    <item android:id="@android:id/progress" android:drawable="@drawable/bg_s_slider" android:width="303dp" android:height="40dp" />
+
+</layer-list>-->
+
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#EEEEEE" />
+            <corners android:radius="50dip" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="#EEEEEE" />
+                <corners android:radius="50dip" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="#D5F0D5" />
+                <corners android:radius="50dip" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

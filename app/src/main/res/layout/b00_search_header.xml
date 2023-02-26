@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/layout_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/b00_search_question" />
+
+    <include
+        android:id="@+id/layout_diagnostic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/b00_search_diagnostic" />
+
+    <include
+        android:id="@+id/layout_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/b00_search_article" />
+
+    <include
+        android:id="@+id/layout_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/b00_search_video" />
+
+    <include
+        android:id="@+id/layout_expert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/b00_search_expert" />
+
+</LinearLayout>

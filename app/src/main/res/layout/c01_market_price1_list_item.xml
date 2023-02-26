@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/zuowu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="玉米"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/text_grey"
+                android:gravity="center"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0.7~0.75"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/text_red"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="科尔沁"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/text_grey"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="2017-09-10"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/text_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/line_grey"
+        />
+
+
+</LinearLayout>

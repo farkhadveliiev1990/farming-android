@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dmy.farming"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="24" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.dmy.farming" />
+
+    <!--相机 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.dmy.farming"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="com.dmy.farming.FarmingApp"
+        android:allowBackup="false"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:logo="@drawable/icon"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="farm.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="5cliTF7CUcul2TzMHF7okouU4mHCBh8r" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
+
+
+        <!-- umengAppKey，replace to yours -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a2908abf29d983716000072" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" >
+        </meta-data>
+
+        <!-- mob -->
+        <meta-data android:name="Mob-AppKey" android:value="moba6b6c6d6" />
+        <meta-data android:name="Mob-AppSecret" android:value="b89d2427a3bc7ad1aea1e1e8c1d36bf3" />
+
+        <activity
+            android:name="com.dmy.farming.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="org.bee.activity.StartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.A01_SigninActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dmy.farming.activity.A02_ThirdSignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.A03_FindPassPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.A02_SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.A03_FindPassPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.A03_ThirdPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.A04_ArticleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.B01_SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.B01_KnowledgeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.B00_SearchActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.VideoViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.GalleryImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.zctivity.AppOutActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity
+            android:name="com.dmy.farming.zctivity.ShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>-->
+        <activity
+            android:name="org.bee.activity.FullScreenPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.zctivity.ShareTencentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.ActivityLifeCycleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.MemoryMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.DebugMessageListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.CrashLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.CrashLogDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.DebugCancelDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog" />
+        <activity
+            android:name="org.bee.activity.DebugDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.DebugTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.bee.activity.FloatViewSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.HtmlViewActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="org.bee.service.MemoryService" >
+            <intent-filter android:priority="1000" >
+                <action android:name="org.bee.service.MemoryService" />
+            </intent-filter>
+        </service>
+        <service android:name="org.bee.service.NetworkStateService" >
+            <intent-filter android:priority="1000" >
+                <action android:name="org.bee.service.NetworkStateService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.PublishActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.GeneralInterfaceActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.ConversationActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.FriendActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.tencent.weibo.sdk.android.component.Authorize" >
+        </activity>
+        <activity android:name="com.tencent.weibo.sdk.android.component.GeneralDataShowActivity" >
+        </activity>
+        <activity android:name="com.tencent.weibo.sdk.android.component.ReAddActivity" >
+        </activity>
+        <!-- wechat callback -->
+        <activity
+            android:name="com.dmy.farming.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--新浪微博-->
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- tencent -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106516061" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name="org.bee.service.MyPushMessageReceiver" >
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名 -->
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="com.dmy.farming.bdpush"
+            android:exported="true"
+            android:protectionLevel="signature"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.dmy.farming" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.dmy.farming.activity.E01_InvitationActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_HelpCenterActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_ActCenterActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyQuestionActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_TracingActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyBuyActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MySellActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyRentActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_FindHelpActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_InsuranceActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_StoreActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_NoticeActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyCollectionActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyFollowActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.E01_SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.E01_InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.E02_ResetPhoneStartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.E02_EditFieldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.E02_EditGenderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.E03_ResetPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.C01_SellActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.C00_CityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.C01_AgrotechniqueVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.C04_ChooseCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.ChooseCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.ChooseQuestionTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.ChooseCropTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.ChooseCropNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.ChoosePublishTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.ChooseUnitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.C01_FarmNewsActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_MarketPriceActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_MarketPrice1Activity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C02_AgrotechniqueVideoDetailActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_AgrotechniqueArticleActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C02_AgrotechniqueArticleDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_DiagnosticLibActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C03_DiagmpsticLibDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyQuestionItemDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.AddCropActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.PriceFilterActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.PricePublishActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.PublishQuestionActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.PublishBuyActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.PublishRentActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.PublishFindFriendActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.PublishTypeChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.D01_QuestionDetailActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.dmy.farming.activity.C01_FarmNewsItemDetailActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.dmy.farming.activity.C01_ExpertListActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C02_ExpertVideoActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C03_ExpertEvaluateActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_ExpertActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_ExpertAnswerListItemActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_ExpertAnswerDatailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_ExpertDatailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyQuestionAnswerActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyQuestionAnswerDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name="com.dmy.farming.activity.C01_BuyActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_RentActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_FindHelperActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.B01_AgriculturalTechnologyActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_MyFollowEditActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01PubilcSellActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_SellDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C00_BuyDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.photopicker.PhotoPickerActivity"
+            android:theme="@style/PhotoPickerTheme"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.dmy.farming.photopicker.PhotoPreviewActivity"
+            android:theme="@style/PhotoPickerTheme"/>
+        <activity android:name="com.dmy.farming.activity.ImagePreviewActivity"
+            android:theme="@style/PhotoPickerTheme"/>
+        <activity
+            android:name="com.dmy.farming.activity.C01_RentDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.C01_FindHelperDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.B00_WarningActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_NoticeDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.E03_ChangePassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dmy.farming.activity.B01_WarnDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.dmy.farming.activity.E01_HelpCenterDetailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="org.bee.activity.BaseActivity" />
+    </application>
+
+</manifest>

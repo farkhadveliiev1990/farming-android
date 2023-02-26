@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">农事在线</string>
+    <string name="again_exit">再按一次退出APP</string>
+    <string name="share_share">分享</string>
+    <string name="share_sina">分享到新浪微博</string>
+    <string name="share_tencent">分享到腾讯微博</string>
+    <string name="share_weixin">分享到微信</string>
+    <string name="share_weixin_timeline">分享到朋友圈</string>
+    <string name="success_share">成功！！</string>
+    <string name="user_cancel">用户取消！！</string>
+    <string name="fail_share">分享失败！！</string>
+    <string name="broadcast_success">转播成功</string>
+    <string name="successful_authentication">认证成功！</string>
+    <string name="hold_on">努力加载中</string>
+    <string name="session_expires_tips">登录过期，请重新登录</string>
+
+    <string name="dialog_title">title</string>
+    <string name="dialog_message">message</string>
+    <string name="dialog_ensure">确定</string>
+    <string name="dialog_cancel">取消</string>
+
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_last_time">最后更新时间：</string>
+    <string name="xlistview_header_hint_loading">正在加载…</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_header_hint_ready">释放刷新</string>
+
+    <string name="lifecycle_all">所有</string>
+    <string name="lifecycle_visible">可见</string>
+    <string name="lifecycle_frontdeskoperation">前台运行</string>
+    <string name="life_cycle">activity生存周期</string>
+
+    <string name="crash_log_analysis">崩溃日志分析</string>
+    <string name="exit_debug_mode">确认退出debug模式？</string>
+    <string name="debughome_log">协议log</string>
+    <string name="debughome_activity">activity周期</string>
+    <string name="debughome_crashlog">crash log</string>
+    <string name="debughome_floatingwindow">浮窗设置</string>
+    <string name="floatView_floatingwindowopen">开启悬浮窗</string>
+    <string name="floatView_floatingwindowclose">关闭悬浮窗</string>
+    <string name="floatView_3g">模拟3G网络</string>
+    <string name="floatView_cancel3g">取消模拟3G网络</string>
+    <string name="floatView_2g">模拟2G网络</string>
+    <string name="floatView_cancel2g">取消模拟2G网络</string>
+
+    <string name="memorymessagemctivity_motalram">总内存</string>
+    <string name="memorymessageactivity_freeram">空闲内存</string>
+    <string name="memorymessageactivity_lowram">是否处于低内存状态</string>
+    <string name="memorymessageactivity_rate">传输速率</string>
+    <string name="memorymessageactivity_id">进程ID</string>
+    <string name="memorymessageactivity_uid">进程所在的UID</string>
+    <string name="memorymessageactivity_mem">进程占用内存</string>
+    <string name="memorymessageactivity_process">进程名</string>
+
+    <string name="topview_message">通知</string>
+    <string name="txt_info">浇点水了放空间奥拉夫吉拉斯大富科技达拉斯附近当老师腹肌拉伤快点发吉林省附近了但是附近当老师开
+        发阶段酸辣粉金龙烧烤都放假了可是减肥了文件分类肯定是加法计算放了假发两块减肥代课老师费劲儿我就看了吉拉斯上的快发历
+        是打发看介绍浪费乐山大佛加拉斯腹肌拉伤附近的说了附近偶尔玩覅技术反馈离得近放了假而我覅几点考虑角色非看了但是机锋网
+        就立刻圣诞节快乐是放假了是打发接我防雷接地分开了送积分我技师登录史看</string>
+    <string name="tts_toast_format" formatted="false">缓冲进度为%d%%，播放进度为%d%%</string>
+
+    <!-- photopicker -->
+    <string name="image">图片</string>
+    <string name="all_image">所有图片</string>
+    <string name="preview">预览</string>
+    <string name="msg_no_camera">无法启用系统相机</string>
+    <string name="msg_amount_limit">已经达到最高选择数量</string>
+    <string name="done">完成</string>
+    <string name="done_with_count">完成(%1$d/%2$d)</string>
+    <string name="image_index">%1$d/%2$d</string>
+    <string name="delete">删除</string>
+    <string name="deleted_a_photo">删除了一张图片</string>
+    <string name="confirm_to_delete">确认删除？</string>
+    <string name="yes">确定</string>
+    <string name="cancel">取消</string>
+    <string name="undo">撤消</string>
+    <string name="send">发送</string>
+    <string name="photo">图片</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/main_green">
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/view_search"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/input_round_white">
+            <TextView
+                android:id="@+id/text_city"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:hint="选择"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:drawablePadding="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="12dp"
+                android:drawableRight="@drawable/icon_open"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ser_icon_search"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/edit_keyword"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:textSize="13sp"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="搜索你想找的内容" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_cancel"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
